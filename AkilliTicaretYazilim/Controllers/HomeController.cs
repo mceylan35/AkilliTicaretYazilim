@@ -35,7 +35,6 @@ namespace AkilliTicaretYazilim.Controllers
             List<Order> orders = new List<Order>();
             Order order = new Order();
             order.products = new List<Product>();
-
             order.products.Add(_context.Products.Select(i => new Product { ID = i.ID, CategoryID = (int)i.CategoryID, Price = i.Price }).FirstOrDefault(i => i.ID == 1));
             order.products.Add(_context.Products.Select(i => new Product { ID = i.ID, CategoryID = (int)i.CategoryID, Price = i.Price }).FirstOrDefault(i => i.ID == 4));
 
